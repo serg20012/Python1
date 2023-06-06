@@ -22,10 +22,20 @@
 #     print("введите число массива2", i+1, ":")
 #     k = int(input())
 #     list_2.append(k)
+
+# вариант 1 используется оператор пересечения &
+
+# set1, set2 = set(list_1), set(list_2)
+# newset = set1 & set2
+# print(sorted(newset))
+
+# вариант 2 мой
+
 # for i in list_1:
 #     if i in list_2:
 #         new_list.append(i)
 # print(*sorted(new_list))
+
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растет на
 # круглой грядке, причем кусты высажены только по окружности. Таким образом, у
@@ -41,11 +51,11 @@
 # заданной во входном файле грядки.
 # 4 -> 1 2 3 4
 # 9
-grydka = [11, 11, 4, 4, 7, 7, 5]
-maximum = 0
-test = 0
-for i in range(len(grydka)-1):
-    test = grydka[i-1] + grydka[i] + grydka[i+1]
-    if test > maximum:
-        maximum = test
-print(maximum)
+# grydka = [11, 11, 4, 4, 7, 7, 5]
+# maximum = 0
+# test = 0
+# for i in range(len(grydka)-1):
+#     test = grydka[i-1] + grydka[i] + grydka[i+1]
+#     if test > maximum:
+#         maximum = test
+# print(maximum)
