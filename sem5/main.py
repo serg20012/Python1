@@ -78,13 +78,22 @@
 
 # Input:    2 -> 3 4
 # Output: 4 3
-def print_reverse():
-    num = int(input("Введите количество элементов: "))
-    if num == 0:
-        return
-    value = int(input("Введите элемент: "))
-    print_reverse()
-    print(value, end=" ")
+# def print_reverse(el):
+#     if len(el) > 1:
+#         print_reverse(el[1:])
+#     print(el[0], end=" ")
 
 
-print_reverse()
+# n = int(input("Введите количество элементов: "))
+# print("введите числа через пробел")
+# el = input().split()
+# print_reverse(el)
+def f(n):
+    if n == 0:
+        return '!'
+    k = int(input())
+    return f(n-1)+f' {k}'
+
+
+n = int(input())
+print(f(n))
