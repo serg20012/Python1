@@ -42,15 +42,37 @@
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
 
-def print_operation_table(oper, rows, col):
-    for i in range(1, rows+1):
-        for j in range(1, col+1):
-            res = oper(i, j)
-            print(res, end=" ")
-        print()
+# def print_operation_table(oper, rows, col):
+#     for i in range(1, rows+1):
+#         for j in range(1, col+1):
+#             res = oper(i, j)
+#             print(res, end=" ")
+#         print()
 
 
-x = int(input("Введите строки: "))
-y = int(input("Введите столбцы: "))
+# x = int(input("Введите строки: "))
+# y = int(input("Введите столбцы: "))
 
-print_operation_table(lambda rows, col: rows * col, x, y)
+# print_operation_table(lambda rows, col: rows * col, x, y)
+
+# задача из семинара вводится список целых чисел через
+# пробел необходимо оставить в нем только двухзначные числа
+# реализовать проограмму с помощью filter.
+# ввод: -8 11 0 -23 140 1
+# вывод: 11 -23
+
+# numbers = '-8 11 0 -23 140 1'
+# numbers = numbers.split()
+# print(numbers)
+# numbers = list(map(int, numbers))
+
+# filtered_numbers = list(
+#     filter(lambda x: -9 > x > -99 or 9 < x < 100, numbers))
+
+# print(*filtered_numbers)
+
+# задача из семинара заполнить матрицу "0", главную диаогональ 1
+
+x = int(input("Введите размер: "))
+matrix = [[1 if i == j else 0 for i in range(x)] for j in range(x)]
+print(*matrix, sep="\n")
